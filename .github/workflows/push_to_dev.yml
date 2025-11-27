@@ -23,7 +23,9 @@ jobs:
           cache: "poetry"
 
       - name: Install poetry
-        run: pip install poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: 2.2.1
 
       - name: Install dependencies
         run: poetry install --no-root
